@@ -14,6 +14,9 @@
 		685E9B6A1F3F3FE8007C2E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685E9B681F3F3FE8007C2E4A /* LaunchScreen.storyboard */; };
 		685E9B751F3F3FE8007C2E4A /* FyberMobileOffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E9B741F3F3FE8007C2E4A /* FyberMobileOffersTests.swift */; };
 		685E9B801F3F3FE8007C2E4A /* FyberMobileOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E9B7F1F3F3FE8007C2E4A /* FyberMobileOffersUITests.swift */; };
+		68AB2F4E5F52458B8F798467 /* Pods_FyberMobileOffersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */; };
+		E18A3EE26D68F4A96DC2B44E /* Pods_FyberMobileOffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F580AD04FAC9FBEF8C8B6 /* Pods_FyberMobileOffers.framework */; };
+		F0123AC9FEB269E3D88F1115 /* Pods_FyberMobileOffersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C163CC2C541DC00C2E95FD18 /* Pods_FyberMobileOffersTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161BA1772671856A38D6E4FB /* Pods-FyberMobileOffersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersUITests/Pods-FyberMobileOffersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		364CBFEE89402F025446B1CC /* Pods-FyberMobileOffers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffers/Pods-FyberMobileOffers.debug.xcconfig"; sourceTree = "<group>"; };
+		5A0BC5A6102259E9835CA4C7 /* Pods-FyberMobileOffers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffers.release.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffers/Pods-FyberMobileOffers.release.xcconfig"; sourceTree = "<group>"; };
 		685E9B5C1F3F3FE7007C2E4A /* FyberMobileOffers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FyberMobileOffers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		685E9B5F1F3F3FE7007C2E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685E9B611F3F3FE7007C2E4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		685E9B7B1F3F3FE8007C2E4A /* FyberMobileOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FyberMobileOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		685E9B7F1F3F3FE8007C2E4A /* FyberMobileOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FyberMobileOffersUITests.swift; sourceTree = "<group>"; };
 		685E9B811F3F3FE9007C2E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BAF6A62ACDFD2179AEA0948 /* Pods-FyberMobileOffersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B9CA6E1B6284C0C40640975 /* Pods-FyberMobileOffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FyberMobileOffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B58F580AD04FAC9FBEF8C8B6 /* Pods_FyberMobileOffers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FyberMobileOffers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C163CC2C541DC00C2E95FD18 /* Pods_FyberMobileOffersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FyberMobileOffersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82A6685AC4A48568B81AF8A /* Pods-FyberMobileOffersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersUITests/Pods-FyberMobileOffersUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18A3EE26D68F4A96DC2B44E /* Pods_FyberMobileOffers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0123AC9FEB269E3D88F1115 /* Pods_FyberMobileOffersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AB2F4E5F52458B8F798467 /* Pods_FyberMobileOffersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29F5AB390AADAFC60526A7F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				364CBFEE89402F025446B1CC /* Pods-FyberMobileOffers.debug.xcconfig */,
+				5A0BC5A6102259E9835CA4C7 /* Pods-FyberMobileOffers.release.xcconfig */,
+				7B9CA6E1B6284C0C40640975 /* Pods-FyberMobileOffersTests.debug.xcconfig */,
+				6BAF6A62ACDFD2179AEA0948 /* Pods-FyberMobileOffersTests.release.xcconfig */,
+				161BA1772671856A38D6E4FB /* Pods-FyberMobileOffersUITests.debug.xcconfig */,
+				D82A6685AC4A48568B81AF8A /* Pods-FyberMobileOffersUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		685E9B531F3F3FE7007C2E4A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				685E9B731F3F3FE8007C2E4A /* FyberMobileOffersTests */,
 				685E9B7E1F3F3FE8007C2E4A /* FyberMobileOffersUITests */,
 				685E9B5D1F3F3FE7007C2E4A /* Products */,
+				29F5AB390AADAFC60526A7F3 /* Pods */,
+				F4C6ECF5423D8E32E84EC277 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = FyberMobileOffersUITests;
 			sourceTree = "<group>";
 		};
+		F4C6ECF5423D8E32E84EC277 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B58F580AD04FAC9FBEF8C8B6 /* Pods_FyberMobileOffers.framework */,
+				C163CC2C541DC00C2E95FD18 /* Pods_FyberMobileOffersTests.framework */,
+				AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685E9B841F3F3FE9007C2E4A /* Build configuration list for PBXNativeTarget "FyberMobileOffers" */;
 			buildPhases = (
+				1EE2E89EC3B27EAAB33E93AE /* [CP] Check Pods Manifest.lock */,
 				685E9B581F3F3FE7007C2E4A /* Sources */,
 				685E9B591F3F3FE7007C2E4A /* Frameworks */,
 				685E9B5A1F3F3FE7007C2E4A /* Resources */,
+				BDDA57CBCD5667C66FB3D6F3 /* [CP] Embed Pods Frameworks */,
+				964DAB570284461514B65A54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685E9B871F3F3FE9007C2E4A /* Build configuration list for PBXNativeTarget "FyberMobileOffersTests" */;
 			buildPhases = (
+				9947B0E126F555596DB2B539 /* [CP] Check Pods Manifest.lock */,
 				685E9B6C1F3F3FE8007C2E4A /* Sources */,
 				685E9B6D1F3F3FE8007C2E4A /* Frameworks */,
 				685E9B6E1F3F3FE8007C2E4A /* Resources */,
+				2356A3ED3AEE0E20EA61CA5D /* [CP] Embed Pods Frameworks */,
+				858601607C941317EF0AFBF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 685E9B8A1F3F3FE9007C2E4A /* Build configuration list for PBXNativeTarget "FyberMobileOffersUITests" */;
 			buildPhases = (
+				677BD02B91E820AF12BF2BD1 /* [CP] Check Pods Manifest.lock */,
 				685E9B771F3F3FE8007C2E4A /* Sources */,
 				685E9B781F3F3FE8007C2E4A /* Frameworks */,
 				685E9B791F3F3FE8007C2E4A /* Resources */,
+				A27E5DA2DD1DE28C54BD6E65 /* [CP] Embed Pods Frameworks */,
+				123280254BF0C02D36B2DDBE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		123280254BF0C02D36B2DDBE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberMobileOffersUITests/Pods-FyberMobileOffersUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EE2E89EC3B27EAAB33E93AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2356A3ED3AEE0E20EA61CA5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		677BD02B91E820AF12BF2BD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		858601607C941317EF0AFBF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		964DAB570284461514B65A54 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberMobileOffers/Pods-FyberMobileOffers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9947B0E126F555596DB2B539 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A27E5DA2DD1DE28C54BD6E65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberMobileOffersUITests/Pods-FyberMobileOffersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDDA57CBCD5667C66FB3D6F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FyberMobileOffers/Pods-FyberMobileOffers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		685E9B581F3F3FE7007C2E4A /* Sources */ = {
@@ -415,6 +602,7 @@
 		};
 		685E9B851F3F3FE9007C2E4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364CBFEE89402F025446B1CC /* Pods-FyberMobileOffers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6ZKF9BDJCT;
@@ -428,6 +616,7 @@
 		};
 		685E9B861F3F3FE9007C2E4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0BC5A6102259E9835CA4C7 /* Pods-FyberMobileOffers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6ZKF9BDJCT;
@@ -441,6 +630,7 @@
 		};
 		685E9B881F3F3FE9007C2E4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9CA6E1B6284C0C40640975 /* Pods-FyberMobileOffersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +646,7 @@
 		};
 		685E9B891F3F3FE9007C2E4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BAF6A62ACDFD2179AEA0948 /* Pods-FyberMobileOffersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +662,7 @@
 		};
 		685E9B8B1F3F3FE9007C2E4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 161BA1772671856A38D6E4FB /* Pods-FyberMobileOffersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ZKF9BDJCT;
@@ -485,6 +677,7 @@
 		};
 		685E9B8C1F3F3FE9007C2E4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D82A6685AC4A48568B81AF8A /* Pods-FyberMobileOffersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ZKF9BDJCT;
@@ -516,6 +709,7 @@
 				685E9B861F3F3FE9007C2E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		685E9B871F3F3FE9007C2E4A /* Build configuration list for PBXNativeTarget "FyberMobileOffersTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +718,7 @@
 				685E9B891F3F3FE9007C2E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		685E9B8A1F3F3FE9007C2E4A /* Build configuration list for PBXNativeTarget "FyberMobileOffersUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +727,7 @@
 				685E9B8C1F3F3FE9007C2E4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
