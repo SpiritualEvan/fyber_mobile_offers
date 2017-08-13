@@ -72,7 +72,6 @@ final class FOOffersViewController: UIViewController, UITableViewDelegate, UITab
             cell.displayModel(model: nil)
             cell.textLabel?.text = true == (tableView.refreshControl?.isRefreshing) ? nil : "No offers. Pull down screen to refresh"
         }else {
-            print(self.offers[indexPath.row].thumbmailUrl)
             cell.displayModel(model: self.offers[indexPath.row])
             cell.textLabel?.text = nil
         }
