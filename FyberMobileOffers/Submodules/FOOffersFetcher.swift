@@ -75,7 +75,7 @@ struct FOOffersFetcher {
         return hashTarget.sha1().lowercased()
     }
     public func observableFetcher() -> Observable<[FOOfferModel]> {
-        return Observable<[String:Any]>.create { observer in
+        return Observable<[FOOfferModel]>.create { observer in
             
             //
             // reference : https://ios.fyber.com/docs/rest-api-preparing-response
@@ -140,25 +140,28 @@ struct FOOffersFetcher {
                     return
                 }
                 
-                // can't check out status code in response now
+                // Can't check out status entry in response now
+                // This entry doesn't exist in actual response
 //                guard nil != json["code"] as? Int else {
 //                    observer.onError(FOOffersFetcherError.noStatusCodeFound(json))
 //                    return
 //                }
                 
-                // can't check out status code whether it is ok or not.
-                // no response code table exists
-                // https://ios.fyber.com/docs/rest-api-preparing-response
-                //                guard let statusCode = root["code"] as? Int else {
-                //                    observer.onError(FMOOffersFetcherError.noStatusCodeFound(json:json))
-                //                }
-                
                 guard let offersDict = json["offers"] as? [[String:Any]] else {
                     observer.onError(FOOffersFetcherError.noOffersEntryFound(json))
                     return
                 }
-                let offers = offersDict.map { FOOfferModel(json: $0) }
-                observer.onNext(json)
+                
+                var offers:[FOOfferModel]!
+                do {
+                    offers = try offersDict.map { try FOOfferModel(offerEntry: $0) }
+                }catch {
+                    observer.onError(error)
+                    return
+                }
+                
+                observer.onNext(offers)
+                
             })
             task.resume()
             

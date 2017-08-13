@@ -29,9 +29,9 @@ enum FOOfferModelError:Error, CustomNSError {
         var message = ""
         switch self {
         case .noTitleEntryInJson(let json): message = "No title entry found in json json : \(json)"
-        case .noTeaserEntryInJson(let json): message = "No title entry found in json json : \(json)"
-        case .noHiresThumbnailUrlInJson(let json): message = "No title entry found in json json : \(json)"
-        case .noPayoutInJson(let json): message = "No title entry found in json json : \(json)"
+        case .noTeaserEntryInJson(let json): message = "No teaser entry found in json json : \(json)"
+        case .noHiresThumbnailUrlInJson(let json): message = "No high resolution thumbnail url found in json json : \(json)"
+        case .noPayoutInJson(let json): message = "No payout entry found in json json : \(json)"
         case .invaildThumbnailUrl(let urlString): message = "Invaild thumbnail url : \(urlString)"
         }
         return [NSLocalizedDescriptionKey:message]
@@ -42,9 +42,9 @@ struct FOOfferModel {
     var title:String!
     var teaser:String!
     var thumbmailUrl:URL!// hi resolution thumbnail
-    var payout:String!
+    var payout:Int = 0
     
-    init(json offerEntry:[String:Any]) throws {
+    init(offerEntry:[String:Any]) throws {
         guard let title = offerEntry["title"] as? String,
             false == title.isEmpty else {
             throw FOOfferModelError.noTitleEntryInJson(offerEntry)
@@ -53,23 +53,21 @@ struct FOOfferModel {
             false == teaser.isEmpty else {
             throw FOOfferModelError.noTeaserEntryInJson(offerEntry)
         }
-        guard let thumbnailUrlString = offerEntry["thumbnail"] as? String,
-            false == thumbnailUrlString.isEmpty else {
+        guard let thumbnailEntry = offerEntry["thumbnail"] as? [String:String],
+            let hiresThumbnailUrlString = thumbnailEntry["hires"],
+            false == hiresThumbnailUrlString.isEmpty else {
             throw FOOfferModelError.noHiresThumbnailUrlInJson(offerEntry)
         }
-        guard let payout = offerEntry["payout"] as? String,
-            false == payout.isEmpty else {
+        guard let thumbnailURL = URL(string:hiresThumbnailUrlString) else {
+            throw FOOfferModelError.invaildThumbnailUrl(hiresThumbnailUrlString)
+        }
+        guard let payout = offerEntry["payout"] as? NSNumber else {
             throw FOOfferModelError.noPayoutInJson(offerEntry)
         }
         
         self.title = title
         self.teaser = teaser
-        
-        if let thumbnailUrl = URL(string: thumbnailUrlString) {
-            self.thumbmailUrl = thumbnailUrl
-        }else {
-            throw FOOfferModelError.invaildThumbnailUrl(thumbnailUrlString)
-        }
-        self.payout = payout
+        self.thumbmailUrl = thumbnailURL
+        self.payout = payout.intValue
     }
 }
