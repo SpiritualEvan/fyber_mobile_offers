@@ -6,6 +6,7 @@ target 'FyberMobileOffers' do
   pod 'RxSwift',    '~> 3.0'
   pod 'CryptoSwift'
   pod 'ReachabilitySwift', '~> 3'
+  pod 'FLAnimatedImage', '~> 1.0'
   
   target 'FyberMobileOffersTests' do
     inherit! :search_paths

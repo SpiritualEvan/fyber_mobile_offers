@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import CryptoSwift
+import ReachabilitySwift
 
 enum FOOffersFetcherError :Error, CustomNSError   {
 
@@ -80,6 +81,11 @@ struct FOOffersFetcher {
     }
     public func observableFetcher() -> Observable<[FOOfferModel]> {
         return Observable<[FOOfferModel]>.create { observer in
+            
+            guard true == Reachability()?.isReachable else {
+                observer.onError(FOOffersFetcherError.noNetwork)
+                return Disposables.create()
+            }
             
             //
             // reference : https://ios.fyber.com/docs/rest-api-preparing-response
@@ -165,7 +171,7 @@ struct FOOffersFetcher {
                 }
                 
                 observer.onNext(offers)
-                
+                observer.onCompleted()
             })
             task.resume()
             

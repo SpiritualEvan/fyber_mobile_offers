@@ -8,9 +8,9 @@
 
 import XCTest
 import RxSwift
+import UIKit
+import FLAnimatedImage
 @testable import FyberMobileOffers
-
-
 
 class FyberMobileOffersTests: XCTestCase {
 
@@ -82,7 +82,7 @@ class FyberMobileOffersTests: XCTestCase {
         
         
     }
-    func testObservableFetcher() {
+    func testObservableOffersFetcher() {
         
         let onNextExpectation = expectation(description: "onNextExpectation")
         
@@ -101,12 +101,65 @@ class FyberMobileOffersTests: XCTestCase {
             }
             
         }
-        
-        
-        
-        
-        
     }
-    
-    
+    func testObservableImageFetcherWithGif() {
+        
+        let onNextExpectation = expectation(description: "onNextExpectation")
+        FOImageFetcher.shared.observableImageFetcher(imageURL: URL(string:"http://cdn2.sponsorpay.com/assets/66971/Supereasy_cat_GIF_175x175_square_175.gif"))
+            .subscribe(onNext: { (tuple: (image:UIImage?, gif:FLAnimatedImage?)) in
+                XCTAssertNil(tuple.image)
+                XCTAssertNotNil(tuple.gif)
+                onNextExpectation.fulfill()
+            }, onError: { (error) in
+                XCTFail(error.localizedDescription)
+            }, onCompleted: nil, onDisposed: nil)
+        
+        self.waitForExpectations(timeout: 10) { (error) in
+            guard nil == error else {
+                XCTFail((error?.localizedDescription)!)
+                return
+            }
+            
+        }
+    }
+    func testObservableImageFetcherWithPng() {
+        
+        let onNextExpectation = expectation(description: "onNextExpectation")
+        FOImageFetcher.shared.observableImageFetcher(imageURL: URL(string:"http://cdn4.sponsorpay.com/app_icons/90930/big_mobile_icon.png"))
+            .subscribe(onNext: { (tuple: (image:UIImage?, gif:FLAnimatedImage?)) in
+                XCTAssertNil(tuple.gif)
+                XCTAssertNotNil(tuple.image)
+                onNextExpectation.fulfill()
+            }, onError: { (error) in
+                XCTFail(error.localizedDescription)
+            }, onCompleted: nil, onDisposed: nil)
+        
+        self.waitForExpectations(timeout: 10) { (error) in
+            guard nil == error else {
+                XCTFail((error?.localizedDescription)!)
+                return
+            }
+            
+        }
+    }
+    func testObservableImageFetcherWithJpg() {
+        
+        let onNextExpectation = expectation(description: "onNextExpectation")
+        FOImageFetcher.shared.observableImageFetcher(imageURL: URL(string:"http://cdn4.sponsorpay.com/assets/66958/ice_cream_175x175_square_175.jpg"))
+            .subscribe(onNext: { (tuple: (image:UIImage?, gif:FLAnimatedImage?)) in
+                XCTAssertNil(tuple.gif)
+                XCTAssertNotNil(tuple.image)
+                onNextExpectation.fulfill()
+            }, onError: { (error) in
+                XCTFail(error.localizedDescription)
+            }, onCompleted: nil, onDisposed: nil)
+        
+        self.waitForExpectations(timeout: 10) { (error) in
+            guard nil == error else {
+                XCTFail((error?.localizedDescription)!)
+                return
+            }
+            
+        }
+    }
 }

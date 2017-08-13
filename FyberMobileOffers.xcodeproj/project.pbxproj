@@ -17,6 +17,7 @@
 		689FD2FA1F3FFA8F00EC4913 /* FOOfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD2F91F3FFA8F00EC4913 /* FOOfferModel.swift */; };
 		689FD2FD1F406AF600EC4913 /* FOOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD2FC1F406AF600EC4913 /* FOOffersViewController.swift */; };
 		689FD2FF1F406CAB00EC4913 /* FOOffersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD2FE1F406CAB00EC4913 /* FOOffersTableViewCell.swift */; };
+		689FD3011F4081DF00EC4913 /* FOImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD3001F4081DF00EC4913 /* FOImageFetcher.swift */; };
 		68AB2F4E5F52458B8F798467 /* Pods_FyberMobileOffersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */; };
 		E18A3EE26D68F4A96DC2B44E /* Pods_FyberMobileOffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F580AD04FAC9FBEF8C8B6 /* Pods_FyberMobileOffers.framework */; };
 		F0123AC9FEB269E3D88F1115 /* Pods_FyberMobileOffersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C163CC2C541DC00C2E95FD18 /* Pods_FyberMobileOffersTests.framework */; };
@@ -59,6 +60,7 @@
 		689FD2F91F3FFA8F00EC4913 /* FOOfferModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOfferModel.swift; sourceTree = "<group>"; };
 		689FD2FC1F406AF600EC4913 /* FOOffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOffersViewController.swift; sourceTree = "<group>"; };
 		689FD2FE1F406CAB00EC4913 /* FOOffersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOffersTableViewCell.swift; sourceTree = "<group>"; };
+		689FD3001F4081DF00EC4913 /* FOImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOImageFetcher.swift; sourceTree = "<group>"; };
 		6BAF6A62ACDFD2179AEA0948 /* Pods-FyberMobileOffersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B9CA6E1B6284C0C40640975 /* Pods-FyberMobileOffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FyberMobileOffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 			children = (
 				689FD2F71F3FFA7100EC4913 /* FOOffersFetcher.swift */,
 				689FD2F91F3FFA8F00EC4913 /* FOOfferModel.swift */,
+				689FD3001F4081DF00EC4913 /* FOImageFetcher.swift */,
 			);
 			path = Submodules;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				689FD2F81F3FFA7100EC4913 /* FOOffersFetcher.swift in Sources */,
 				689FD2FA1F3FFA8F00EC4913 /* FOOfferModel.swift in Sources */,
 				689FD2FF1F406CAB00EC4913 /* FOOffersTableViewCell.swift in Sources */,
+				689FD3011F4081DF00EC4913 /* FOImageFetcher.swift in Sources */,
 				689FD2FD1F406AF600EC4913 /* FOOffersViewController.swift in Sources */,
 				685E9B601F3F3FE7007C2E4A /* AppDelegate.swift in Sources */,
 			);

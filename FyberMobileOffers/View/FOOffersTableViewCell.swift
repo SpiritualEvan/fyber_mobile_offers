@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FLAnimatedImage
+import RxSwift
 
 final class FOOffersTableViewCell: UITableViewCell {
 
@@ -14,27 +16,39 @@ final class FOOffersTableViewCell: UITableViewCell {
     
     @IBOutlet private var titleLabel:UILabel!
     @IBOutlet private var teaserLabel:UILabel!
-    @IBOutlet private var thumbnailView:UIImageView!
+    @IBOutlet private var thumbnailView:FLAnimatedImageView!
     @IBOutlet private var payoutLabel:UILabel!
-    private var thumbnailDownloadTask:URLSessionDataTask?
+    private var thumbnailSubscription:Disposable?
     
-    public func displayModel(model:FOOfferModel) {
-        titleLabel.text = model.title
-        teaserLabel.text = model.teaser
-        payoutLabel.text = String(model.payout)
-        
-        thumbnailDownloadTask?.cancel()
-        thumbnailDownloadTask = URLSession.shared.dataTask(with: model.thumbmailUrl) { [weak imageView] (data, response, error) in
-            
-            guard nil != imageView else {
-                return
-            }
-            
-            if let thumbnailData = data, let thumbnailImage = UIImage(data: thumbnailData) {
-                imageView?.image = thumbnailImage
-            }
+    public func displayModel(model:FOOfferModel?) {
+        if nil == model {
+            titleLabel.text = nil
+            teaserLabel.text = nil
+            payoutLabel.text = nil
+            thumbnailView.image = nil
+            thumbnailView.animatedImage = nil
+            thumbnailSubscription?.dispose()
+            thumbnailSubscription = nil
+            return
         }
-        thumbnailDownloadTask?.resume()
+        titleLabel.text = model!.title
+        teaserLabel.text = model!.teaser
+        payoutLabel.text = String(model!.payout)
+        
+        thumbnailSubscription?.dispose()
+        thumbnailView.image = nil
+        thumbnailView.animatedImage = nil
+        thumbnailSubscription = FOImageFetcher.shared.observableImageFetcher(imageURL: model!.thumbmailUrl)
+            .subscribe(onNext: { [weak thumbnailView] (tuple: (image:UIImage?, gifImage:FLAnimatedImage?)) in
+                guard let thumbnailView = thumbnailView else {
+                    return
+                }
+                
+                thumbnailView.image = tuple.image
+                thumbnailView.animatedImage = tuple.gifImage
+                
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
+        
     }
 
 }
