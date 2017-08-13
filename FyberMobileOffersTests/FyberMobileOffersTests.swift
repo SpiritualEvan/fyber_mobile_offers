@@ -13,10 +13,11 @@ import FLAnimatedImage
 @testable import FyberMobileOffers
 
 class FyberMobileOffersTests: XCTestCase {
-
+    var disposeBag:DisposeBag!
     
     override func setUp() {
         super.setUp()
+        disposeBag = DisposeBag()
     }
     
     override func tearDown() {
@@ -92,6 +93,7 @@ class FyberMobileOffersTests: XCTestCase {
             }, onError: { (error) in
                 XCTFail(error.localizedDescription)
             }, onCompleted: nil, onDisposed: nil)
+            .addDisposableTo(disposeBag)
         
         
         self.waitForExpectations(timeout: 6) { (error) in
@@ -113,6 +115,7 @@ class FyberMobileOffersTests: XCTestCase {
             }, onError: { (error) in
                 XCTFail(error.localizedDescription)
             }, onCompleted: nil, onDisposed: nil)
+        .addDisposableTo(disposeBag)
         
         self.waitForExpectations(timeout: 10) { (error) in
             guard nil == error else {
@@ -133,6 +136,7 @@ class FyberMobileOffersTests: XCTestCase {
             }, onError: { (error) in
                 XCTFail(error.localizedDescription)
             }, onCompleted: nil, onDisposed: nil)
+        .addDisposableTo(disposeBag)
         
         self.waitForExpectations(timeout: 10) { (error) in
             guard nil == error else {
@@ -153,6 +157,7 @@ class FyberMobileOffersTests: XCTestCase {
             }, onError: { (error) in
                 XCTFail(error.localizedDescription)
             }, onCompleted: nil, onDisposed: nil)
+        .addDisposableTo(disposeBag)
         
         self.waitForExpectations(timeout: 10) { (error) in
             guard nil == error else {
