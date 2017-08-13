@@ -14,7 +14,8 @@
 		685E9B6A1F3F3FE8007C2E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685E9B681F3F3FE8007C2E4A /* LaunchScreen.storyboard */; };
 		685E9B751F3F3FE8007C2E4A /* FyberMobileOffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E9B741F3F3FE8007C2E4A /* FyberMobileOffersTests.swift */; };
 		685E9B801F3F3FE8007C2E4A /* FyberMobileOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E9B7F1F3F3FE8007C2E4A /* FyberMobileOffersUITests.swift */; };
-		685E9B901F3FB6C9007C2E4A /* FMOOffersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685E9B8F1F3FB6C9007C2E4A /* FMOOffersFetcher.swift */; };
+		689FD2F81F3FFA7100EC4913 /* FOOffersFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD2F71F3FFA7100EC4913 /* FOOffersFetcher.swift */; };
+		689FD2FA1F3FFA8F00EC4913 /* FOOfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689FD2F91F3FFA8F00EC4913 /* FOOfferModel.swift */; };
 		68AB2F4E5F52458B8F798467 /* Pods_FyberMobileOffersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */; };
 		E18A3EE26D68F4A96DC2B44E /* Pods_FyberMobileOffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F580AD04FAC9FBEF8C8B6 /* Pods_FyberMobileOffers.framework */; };
 		F0123AC9FEB269E3D88F1115 /* Pods_FyberMobileOffersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C163CC2C541DC00C2E95FD18 /* Pods_FyberMobileOffersTests.framework */; };
@@ -54,7 +55,8 @@
 		685E9B7B1F3F3FE8007C2E4A /* FyberMobileOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FyberMobileOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		685E9B7F1F3F3FE8007C2E4A /* FyberMobileOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FyberMobileOffersUITests.swift; sourceTree = "<group>"; };
 		685E9B811F3F3FE9007C2E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		685E9B8F1F3FB6C9007C2E4A /* FMOOffersFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMOOffersFetcher.swift; sourceTree = "<group>"; };
+		689FD2F71F3FFA7100EC4913 /* FOOffersFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOffersFetcher.swift; sourceTree = "<group>"; };
+		689FD2F91F3FFA8F00EC4913 /* FOOfferModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOfferModel.swift; sourceTree = "<group>"; };
 		6BAF6A62ACDFD2179AEA0948 /* Pods-FyberMobileOffersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B9CA6E1B6284C0C40640975 /* Pods-FyberMobileOffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FyberMobileOffersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FyberMobileOffersTests/Pods-FyberMobileOffersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEC157598F2F0BA780952CEB /* Pods_FyberMobileOffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FyberMobileOffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +131,7 @@
 		685E9B5E1F3F3FE7007C2E4A /* FyberMobileOffers */ = {
 			isa = PBXGroup;
 			children = (
-				685E9B8F1F3FB6C9007C2E4A /* FMOOffersFetcher.swift */,
+				689FD2F61F3FFA7100EC4913 /* Submodules */,
 				685E9B5F1F3F3FE7007C2E4A /* AppDelegate.swift */,
 				685E9B611F3F3FE7007C2E4A /* ViewController.swift */,
 				685E9B631F3F3FE8007C2E4A /* Main.storyboard */,
@@ -156,6 +158,15 @@
 				685E9B811F3F3FE9007C2E4A /* Info.plist */,
 			);
 			path = FyberMobileOffersUITests;
+			sourceTree = "<group>";
+		};
+		689FD2F61F3FFA7100EC4913 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				689FD2F71F3FFA7100EC4913 /* FOOffersFetcher.swift */,
+				689FD2F91F3FFA8F00EC4913 /* FOOfferModel.swift */,
+			);
+			path = Submodules;
 			sourceTree = "<group>";
 		};
 		F4C6ECF5423D8E32E84EC277 /* Frameworks */ = {
@@ -452,8 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689FD2F81F3FFA7100EC4913 /* FOOffersFetcher.swift in Sources */,
+				689FD2FA1F3FFA8F00EC4913 /* FOOfferModel.swift in Sources */,
 				685E9B621F3F3FE7007C2E4A /* ViewController.swift in Sources */,
-				685E9B901F3FB6C9007C2E4A /* FMOOffersFetcher.swift in Sources */,
 				685E9B601F3F3FE7007C2E4A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

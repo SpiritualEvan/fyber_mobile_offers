@@ -22,6 +22,7 @@ class FyberMobileOffersTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
     func testHashGeneration() {
         
         // given example : HASHKEY CALCULATION section in https://ios.fyber.com/docs/rest-api-preparing-request
@@ -34,27 +35,24 @@ class FyberMobileOffersTests: XCTestCase {
                 joinedDict[tuple.0] = tuple.1
                 return joinedDict
         }
-        let resultHash = FMOOffersFetcher.generateHash(params: paramsDict, apiKey: "e95a21621a1865bcbae3bee89c4d4f84")
+        let resultHash = FOOffersFetcher.generateHash(params: paramsDict, apiKey: "e95a21621a1865bcbae3bee89c4d4f84")
         XCTAssertEqual(resultHash, "7a2b1604c03d46eec1ecd4a686787b75dd693c4d")
     }
     func testRx() {
         
-        /*
-         json 
-            appid: Application ID, provided as simple data 
-            uid: User ID, provided as simple data 
-            device_id: use Android advertising identifier
-            locale: provided as simple data
-            ip: provided as simple data
-            offer_types: 112
-         Sample app data
-            appid: 2070 
-            uid: spiderman 
-            locale: ‘DE’ 
-            ip: ‘109.235.143.113’ 
-            API Key: 1c915e3b5d42d05136185030892fbb846c278927
-         */
-        FMOOffersFetcher.shared.observableFetcher()
+        let onNextExpectation = expectation(description: "onNextExpectation")
+        
+        FOOffersFetcher.shared.observableFetcher()
+        .subscribe(onNext: { (json) in
+            print(json)
+            onNextExpectation.fulfill()
+        }, onError: { (error) in
+            XCTFail(error.localizedDescription)
+        }, onCompleted: nil, onDisposed: nil)
+        self.waitForExpectations(timeout: 3) { (error) in
+            XCTFail((error?.localizedDescription)!)
+        }
+        
         
         
         
