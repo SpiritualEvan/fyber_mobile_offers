@@ -4,10 +4,8 @@ target 'FyberMobileOffers' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'RxSwift',    '~> 3.0'
-  pod 'RxCocoa',    '~> 3.0'
-
-  # Pods for FyberMobileOffers
-
+  pod 'CryptoSwift'
+  
   target 'FyberMobileOffersTests' do
     inherit! :search_paths
     # Pods for testing
