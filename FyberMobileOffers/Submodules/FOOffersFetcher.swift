@@ -12,7 +12,7 @@ import CryptoSwift
 
 enum FOOffersFetcherError :Error, CustomNSError   {
 
-    
+    case noNetwork
     case noJsonResponseFromServer
     case unableToParseJsonResponseIntoString(Data)
     case unableToParseJsonStringIntoDictionary(String)
@@ -20,19 +20,23 @@ enum FOOffersFetcherError :Error, CustomNSError   {
     case invalidResponseSignature(String, String)
     case noOffersEntryFound([String:Any])
     
+    
     var errorCode: Int {
         switch self {
-        case .noJsonResponseFromServer: return 0
-        case .unableToParseJsonResponseIntoString(_): return 1
-        case .unableToParseJsonStringIntoDictionary(_): return 2
-        case .noResponseSignatureFound: return 5
-        case .invalidResponseSignature(_, _): return 6
-        case .noOffersEntryFound(_): return 7
+        case .noNetwork: return 0
+        case .noJsonResponseFromServer: return 1
+        case .unableToParseJsonResponseIntoString(_): return 2
+        case .unableToParseJsonStringIntoDictionary(_): return 3
+        case .noResponseSignatureFound: return 4
+        case .invalidResponseSignature(_, _): return 5
+        case .noOffersEntryFound(_): return 6
         }
     }
     var errorUserInfo: [String : Any] {
         var message = ""
         switch self {
+        case .noNetwork :
+            message = "No network available. Please check device's internet connection."
         case .noJsonResponseFromServer :
             message = "No json response returned from server"
         case .unableToParseJsonResponseIntoString(let data) :
